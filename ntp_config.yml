@@ -17,7 +17,7 @@
           - snmp-server community {{ snmp_ro_community }} RO
           - snmp-server community {{ snmp_rw_community }} RW
 
-    - name: Ensre ACLs are set Correctly
+    - name: Ensure ACLs are set Correctly
       ios_config:
         lines: "{{ item }}"
       with_items: "{{ acl_rules }}"
