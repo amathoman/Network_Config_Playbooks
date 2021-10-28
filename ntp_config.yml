@@ -1,0 +1,14 @@
+---
+- name: Set NTP Network Configurations
+  hosts: all
+  connection: local
+  gather_facts: false
+
+  tasks:
+
+    - name: Launch NTP Config include_role
+      include_role:
+        name: "network_ntp_config"  
+      
+  
+
