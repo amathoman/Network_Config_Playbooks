@@ -1,5 +1,5 @@
 ---
-- name: Set NTP Network Configurations
+- name: Set Network Configurations
   hosts: all
   connection: local
   gather_facts: false
@@ -11,4 +11,16 @@
         name: "network_ntp_config"  
       
   
+    - name: Ensure SNMP settigs are defined
+      ios_config:
+        commands:
+          - snmp-server community "{{ snmp_ro_community }}" RO
+          - snmp-server community "{{ snmp_rw_community }}" RW
 
+    - name: Ensre ACLs are set Correctly
+      ios_config:
+        lines: "{{ lines_template }}"
+      vars:
+        lines_template: "[ {% for acl_rule in acl_rules %}'{{ acl_rules }}',{% endfor %}]"
+
+    

@@ -1,3 +1,17 @@
+# Common Settings for Datacenter_AU_01
+
+## NTP Settings
 ntp_server_list:
   - 1.2.3.4
   - 4.3.2.1
+
+# SNMP Settings
+snmp_ro_community: dc01_ro
+snmp_rw_community: dc01_rw
+
+# DNS Settings
+dns_servers:
+  - 7.7.7.7
+  - 8.8.8.8
+
+  
