@@ -19,8 +19,7 @@
 
     - name: Ensre ACLs are set Correctly
       ios_config:
-        lines: "{{ lines_template }}"
-      vars:
-        lines_template: "[{% for acl_rule in acl_rules %}'{{ acl_rule }}',{% endfor %}]"
+        lines: "{{ item }}"
+      with_items: "{{ acl_rules }}"
 
     
