@@ -20,6 +20,7 @@
     - name: Ensure ACLs are set Correctly
       ios_config:
         lines: "{{ item }}"
+        parents: ip access-list standard
       with_items: "{{ acl_rules }}"
 
     
