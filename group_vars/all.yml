@@ -1,6 +1,6 @@
 acl_rules:
-  - "10 permit ip host 192.0.2.1 any log"
-  - "20 permit ip host 192.0.2.2 any log"
-  - "30 permit ip host 192.0.2.3 any log"
-  - "40 permit ip host 192.0.2.4 any log"
-  - "50 permit ip host 192.0.2.5 any log"
+  - 10 permit ip host 192.0.2.1 any log
+  - 20 permit ip host 192.0.2.2 any log
+  - 30 permit ip host 192.0.2.3 any log
+  - 40 permit ip host 192.0.2.4 any log
+  - 50 permit ip host 192.0.2.5 any log
