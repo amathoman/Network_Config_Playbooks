@@ -14,8 +14,8 @@
     - name: Ensure SNMP settigs are defined
       ios_config:
         commands:
-          - snmp-server community "{{ snmp_ro_community }}" RO
-          - snmp-server community "{{ snmp_rw_community }}" RW
+          - snmp-server community {{ snmp_ro_community }} RO
+          - snmp-server community {{ snmp_rw_community }} RW
 
     - name: Ensre ACLs are set Correctly
       ios_config:
